@@ -10,7 +10,7 @@ public class Main {
         System.out.println("1 - Somar");
         System.out.println("2 - Diminuir");
         System.out.println("3 - Multiplicar");
-        System.out.println("2 - Dividir");
+        System.out.println("4 - Dividir");
         int opcao = sc.nextInt();
         System.out.println("Digite o primeiro valor:");
         double primeiroValor = sc.nextDouble();
@@ -19,16 +19,16 @@ public class Main {
         Calculadora calculadora = new Calculadora(primeiroValor,segundoValor);
         switch (opcao) {
             case 1:
-                System.out.println(calculadora.somar(primeiroValor,segundoValor));
+                System.out.println(calculadora.somar());
                 break;
             case 2:
-                System.out.println(calculadora.diminuir(primeiroValor,segundoValor));
+                System.out.println(calculadora.diminuir());
                 break;
             case 3:
-                System.out.println(calculadora.multiplicar(primeiroValor,segundoValor));
+                System.out.println(calculadora.multiplicar());
                 break;
             case 4:
-                System.out.println(calculadora.dividir(primeiroValor,segundoValor));
+                System.out.println(calculadora.dividir());
                 break;
             default:
         }
@@ -43,16 +43,16 @@ class Calculadora{
         this.segundoValor = segundoValor;
     }
 
-    public double somar (double primeiroValor, double segundoValor){
+    public double somar (){
         return primeiroValor + segundoValor;
     }
-    public double diminuir (double primeiroValor, double segundoValor){
+    public double diminuir (){
         return primeiroValor - segundoValor;
     }
-    public double multiplicar (double primeiroValor, double segundoValor){
+    public double multiplicar (){
         return primeiroValor * segundoValor;
     }
-    public double dividir (double primeiroValor, double segundoValor){
+    public double dividir (){
         return primeiroValor / segundoValor;
     }
 }
